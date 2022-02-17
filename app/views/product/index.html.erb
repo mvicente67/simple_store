@@ -1,9 +1,11 @@
-<h1>Product#index</h1>
+<h1>All Products</h1>
 <ul>
     <% @products.each do |p| %>
-        <li><%= p.title %></li>
+        <li><%= link_to p.title, product_path(p) %></li>
         <li><%= p.description %></li>
         <li><%= number_to_currency p.price %></li>
         <li><%= p.stock_quantity %></li>
+        <p></p>
     <% end %>
+
 </ul>
